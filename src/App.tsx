@@ -584,10 +584,8 @@ export default function PortfolioApp() {
     setFormSubmitting(false);
   };
 
-  // CHANGE 1: Handler for Resume Download
   const handleDownloadResume = () => {
-    // Replace this URL with your actual resume PDF URL
-    const resumeUrl = 'https://drive.google.com/file/d/1n-qURpYVDXtRZwiwiOCNcCO0TftrUhKr/view?usp=drive_linkf'; // or 'https://your-domain.com/path/to/resume.pdf'
+    const resumeUrl = 'https://drive.google.com/file/d/1n-qURpYVDXtRZwiwiOCNcCO0TftrUhKr/view?usp=drive_linkf';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Sahil_Raj_Dubey_Resume.pdf';
@@ -626,7 +624,6 @@ export default function PortfolioApp() {
         }
       `}</style>
 
-      {/* CHANGE 2: Animated 3D Tech Background */}
       <AnimatedBackground />
 
       {/* Progress Bar */}
@@ -695,30 +692,29 @@ export default function PortfolioApp() {
         </div>
       </nav>
 
-      {/* Hero Section - CHANGE 3: Photo first on mobile */}
+      {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          {/* Changed: Flex column on mobile, grid on desktop */}
           <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
             
-            {/* CHANGE 3: Avatar shown first on mobile */}
+            {/* Photo - SHIFTED RIGHT with justify-end */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="flex justify-center order-1 md:order-2"
+              className="flex justify-center md:justify-end order-1 md:order-2"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl blur-2xl opacity-20" />
                 <img
                   src="https://avatars.githubusercontent.com/sahilrajdubey"
                   alt="Sahil Raj Dubey"
-                  className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border border-indigo-500/20"
+                  className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-indigo-500/30 shadow-lg shadow-indigo-500/20 transition-all duration-500 hover:scale-105"
                 />
               </div>
             </motion.div>
 
-            {/* Text content - shown after photo on mobile */}
+            {/* Text content */}
             <motion.div
               initial="hidden"
               animate="visible"
@@ -752,7 +748,6 @@ export default function PortfolioApp() {
                 >
                   View Projects
                 </a>
-                {/* CHANGE 1: Contact Me button replaced with Download Resume */}
                 <button
                   onClick={handleDownloadResume}
                   className="px-6 py-3 glass rounded-lg text-sm font-medium hover:bg-white/5 transition-colors flex items-center gap-2"
@@ -767,21 +762,19 @@ export default function PortfolioApp() {
               {/* Social Links */}
               <motion.div variants={fadeIn} className="flex gap-3 pt-2">
                 {[
-    { href: "https://github.com/sahilrajdubey", icon: <FaGithub size={20} /> },
-    { href: "https://www.linkedin.com/in/sahil-raj-dubey", icon: <FaLinkedin size={20} /> },
-    { href: "https://www.instagram.com/sahilrajdubey_/", icon: <FaInstagram size={20} /> },
+                  { href: "https://github.com/sahilrajdubey", icon: <FaGithub size={20} /> },
+                  { href: "https://www.linkedin.com/in/sahil-raj-dubey", icon: <FaLinkedin size={20} /> },
+                  { href: "https://www.instagram.com/sahilrajdubey_/", icon: <FaInstagram size={20} /> },
                 ].map((social, index) => (
                   <a
-                   key={index}
-          href={social.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10 h-10 glass rounded-lg flex items-center justify-center 
-                     text-gray-400 hover:text-white hover:bg-white/10 
-                     transition-all duration-300 hover:scale-110"
-        >
-                    
-                  
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 glass rounded-lg flex items-center justify-center 
+                               text-gray-400 hover:text-white hover:bg-white/10 
+                               transition-all duration-300 hover:scale-110"
+                  >
                     {social.icon}
                   </a>
                 ))}
