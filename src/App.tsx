@@ -722,7 +722,7 @@ export default function PortfolioApp() {
               className="space-y-6 order-2 md:order-1"
             >
               <motion.div variants={fadeIn} className="space-y-2">
-                <p className="text-indigo-400 text-sm font-medium">Hi Visitor, I'm</p>
+                <p className="text-indigo-400 text-sm font-medium">Hi there, I'm</p>
                 <h1 className="text-5xl md:text-6xl font-bold">
                   <span className="bg-gradient-to-r from-indigo-300 to-purple-400 bg-clip-text text-transparent">
                     Sahil Raj Dubey
