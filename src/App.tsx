@@ -585,7 +585,7 @@ export default function PortfolioApp() {
   };
 
   const handleDownloadResume = () => {
-    const resumeUrl = 'https://drive.google.com/file/d/1jcJVFavLjZRXA556DFqE8P3iUBM2K1lt/view?usp=sharing';
+    const resumeUrl = 'https://drive.google.com/file/d/1G5nDPkH32y1XLnIRjQhQcmJ_ipBUUDDb/view?usp=sharing';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Sahil_Raj_Dubey_Resume.pdf';
