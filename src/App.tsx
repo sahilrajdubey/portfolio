@@ -725,7 +725,7 @@ export default function PortfolioApp() {
                 <p className="text-indigo-400 text-sm font-medium">Hi there , I'm</p>
                 <h1 className="text-5xl md:text-6xl font-bold">
                   <span className="bg-gradient-to-r from-indigo-300 to-purple-400 bg-clip-text text-transparent">
-                    Sahil Raj Dubey
+                    Aastha Ojha
                   </span>
                   <br />
                   
